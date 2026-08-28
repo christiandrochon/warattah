@@ -1,0 +1,104 @@
+:root {
+  /* Charte Warattah — extraite de logo (Copie)-1.svg */
+  --color-red: #75231d;
+  --color-red-hover: #8a443f;
+  --color-red-pressed: #581a16;
+
+  --color-orange: #f2881d;
+  --color-orange-hover: #f49a3f;
+  --color-orange-pressed: #c26d17;
+
+  --color-yellow: #ffd633;
+  --color-yellow-hover: #ffda47;
+  --color-yellow-pressed: #d9b62b;
+
+  /* Couleurs "on-*" (texte lisible sur chaque couleur pleine, logique Material) */
+  --on-red: #f3e9dd;
+  --on-orange: #150c07;
+  --on-yellow: #150c07;
+
+  /* Fond brut : noir chaud teinté par la palette, pas un gris neutre générique */
+  --bg-void: #100907;
+  --bg-surface: #1c120d;
+  --bg-surface-2: #2a1b13;
+  --border-subtle: rgba(242, 136, 29, 0.18);
+  --border-strong: rgba(242, 136, 29, 0.4);
+
+  --text-primary: #f3e9dd;
+  --text-muted: #b7a392;
+
+  --display: 'Bebas Neue', 'Arial Narrow', sans-serif;
+  --sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+
+  font: 18px/150% var(--sans);
+  color-scheme: dark;
+  color: var(--text-primary);
+  background: var(--bg-void);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--display);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+h1 {
+  font-size: 88px;
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  @media (max-width: 1024px) {
+    font-size: 52px;
+  }
+}
+
+h2 {
+  font-size: 40px;
+  @media (max-width: 1024px) {
+    font-size: 30px;
+  }
+}
+
+h3 {
+  font-size: 22px;
+  letter-spacing: 0.08em;
+}
+
+p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: var(--sans);
+}

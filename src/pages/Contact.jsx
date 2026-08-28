@@ -3,8 +3,8 @@ const links = [
   { label: 'Facebook', value: 'facebook.com/warattah', href: 'https://www.facebook.com/warattah' },
   {
     label: 'Bandcamp',
-    value: 'Unpublished Songs',
-    href: 'https://warattah.bandcamp.com/album/unpublished-songs',
+    value: 'warattah.bandcamp.com',
+    href: 'https://warattah.bandcamp.com/music',
   },
   { label: 'SoundCloud', value: 'soundcloud.com/warattah', href: 'https://soundcloud.com/warattah' },
   {
@@ -12,7 +12,6 @@ const links = [
     value: 'reverbnation.com/warattah',
     href: 'https://www.reverbnation.com/warattah',
   },
-  { label: 'Tumblr', value: 'warattah.tumblr.com', href: 'https://warattah.tumblr.com' },
 ]
 
 function Contact() {

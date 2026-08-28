@@ -1,24 +1,54 @@
+import { useLayoutEffect, useRef, useState } from 'react'
 import TrackList from '../components/TrackList.jsx'
+import VideoEmbed from '../components/VideoEmbed.jsx'
 import demoCoverV1 from '../assets/album/distorsion.jpg'
 import demoCoverV2 from '../assets/album/distorsion-v2.jpg'
 import albumCover from '../assets/album/hatred-and-strength.jpg'
 
-function scrollToSection(id) {
-  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
-}
+// function scrollToSection(id) {
+//   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+// }
 
 function Home() {
+  const heroRef = useRef(null)
+  const contentRef = useRef(null)
+  const titleRef = useRef(null)
+  const [activeClip, setActiveClip] = useState(null)
+
+  useLayoutEffect(() => {
+    function alignTitleToSplit() {
+      const hero = heroRef.current
+      const content = contentRef.current
+      const title = titleRef.current
+      if (!hero || !content || !title) return
+
+      content.style.transform = 'none'
+      const heroRect = hero.getBoundingClientRect()
+      const titleRect = title.getBoundingClientRect()
+      const heroMid = heroRect.top + heroRect.height / 2
+      const titleMid = titleRect.top + titleRect.height / 2
+      content.style.transform = `translateY(${heroMid - titleMid}px)`
+    }
+
+    alignTitleToSplit()
+    document.fonts?.ready.then(alignTitleToSplit)
+    window.addEventListener('resize', alignTitleToSplit)
+    return () => window.removeEventListener('resize', alignTitleToSplit)
+  }, [])
+
   return (
     <>
-      <section className="hero">
-        <div className="hero-content">
+      <section className="hero" ref={heroRef}>
+        <div className="hero-content" ref={contentRef}>
           <span className="hero-kicker">Metal tribal</span>
-          <h1 className="hero-title">Warattah</h1>
+          <h1 className="hero-title" ref={titleRef}>
+            Warattah
+          </h1>
           <p className="hero-tagline">
             Musique brute, racines profondes. Découvrez l'univers de
             Warattah.
           </p>
-          <div className="hero-actions">
+          {/* <div className="hero-actions">
             <button
               type="button"
               className="btn btn-primary"
@@ -33,21 +63,39 @@ function Home() {
             >
               Le groupe
             </button>
-          </div>
+          </div> */}
         </div>
       </section>
 
       <section id="musique" className="section">
         <div className="section-inner">
-          <span className="section-eyebrow">Musique</span>
           <h2>Titres</h2>
           <TrackList />
         </div>
       </section>
 
+      <section id="clips" className="section">
+        <div className="section-inner">
+          <h2>Clips</h2>
+          <div className="video-grid">
+            <VideoEmbed
+              videoId="oQgoRfjrkWw"
+              title="Fits of Rage"
+              isPlaying={activeClip === 'oQgoRfjrkWw'}
+              onPlay={() => setActiveClip('oQgoRfjrkWw')}
+            />
+            <VideoEmbed
+              videoId="4pYQwZ2jiiE"
+              title="Walk The Line"
+              isPlaying={activeClip === '4pYQwZ2jiiE'}
+              onPlay={() => setActiveClip('4pYQwZ2jiiE')}
+            />
+          </div>
+        </div>
+      </section>
+
       <section id="groupe" className="section">
         <div className="section-inner bio-content">
-          <span className="section-eyebrow">Bio</span>
           <h2>Le groupe</h2>
 
           <p>

@@ -53,9 +53,9 @@
     --color-red-hover: #94322b;
     --color-red-pressed: #5a0f0a;
 
-    --color-orange: #f98b1b;
-    --color-orange-hover: #f99d3f;
-    --color-orange-pressed: #cd7011;
+    --color-orange: #ff901f;
+    --color-orange-hover: #ffa243;
+    --color-orange-pressed: #e57504;
 
     --color-yellow: #ffd21f;
     --color-yellow-hover: #ffd738;
@@ -64,8 +64,8 @@
     --bg-void: #190e0b;
     --bg-surface: #251711;
     --bg-surface-2: #342016;
-    --border-subtle: rgba(249, 139, 27, 0.18);
-    --border-strong: rgba(249, 139, 27, 0.4);
+    --border-subtle: rgba(255, 144, 31, 0.18);
+    --border-strong: rgba(255, 144, 31, 0.4);
 
     --text-primary: #f7f0e8;
     --text-muted: #bfab9a;

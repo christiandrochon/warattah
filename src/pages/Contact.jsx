@@ -2,18 +2,12 @@ import { useI18n } from '../i18n/context.js'
 
 const links = [
   { label: 'Email', value: 'warattah@mailo.com', href: 'mailto:warattah@mailo.com' },
-  { label: 'Facebook', value: 'facebook.com/warattah', href: 'https://www.facebook.com/warattah' },
   {
     label: 'Bandcamp',
     value: 'warattah.bandcamp.com',
     href: 'https://warattah.bandcamp.com/music',
   },
   { label: 'SoundCloud', value: 'soundcloud.com/warattah', href: 'https://soundcloud.com/warattah' },
-  {
-    label: 'ReverbNation',
-    value: 'reverbnation.com/warattah',
-    href: 'https://www.reverbnation.com/warattah',
-  },
 ]
 
 function Contact() {

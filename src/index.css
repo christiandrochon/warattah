@@ -43,29 +43,35 @@
     font-size: 16px;
   }
 
-  /* Palette mobile : mêmes teintes, mais plus saturées (pas plus
-     claires) — la palette d'origine paraît terne sur les écrans de
-     portable. Éclaircir le jaune le rendait pâle/pas assez jaune et
-     réduisait le contraste avec le A blanc du logo ; ici on privilégie
-     la saturation, le rouge et le jaune restent aussi sombres ou plus. */
+  /* Palette mobile, en oklch() plutôt qu'en sRGB : sur un écran grand
+     gamut (Display P3, la plupart des smartphones récents), le
+     navigateur peut restituer une chrominance que le sRGB classique ne
+     permet pas d'exprimer — des teintes réellement plus intenses, pas
+     juste éclaircies. Sur un écran limité au sRGB, ça retombe
+     visuellement proche des couleurs d'origine (#7c140c / #f2881d /
+     #ffd21f, gardées en commentaire ci-dessous pour revenir en arrière
+     facilement si l'effet est trop marqué sur certains appareils). */
   @media (max-width: 640px) {
-    --color-red: #7c140c;
-    --color-red-hover: #94322b;
-    --color-red-pressed: #5a0f0a;
+    /* --color-red: #7c140c; */
+    --color-red: oklch(38% 0.17 30);
+    /* --color-red-hover: #94322b; */
+    --color-red-hover: oklch(46% 0.16 28);
+    /* --color-red-pressed: #5a0f0a; */
+    --color-red-pressed: oklch(31% 0.13 29);
 
-    /* Orange en oklch() plutôt qu'en sRGB : sur un écran grand gamut
-       (Display P3, la plupart des smartphones récents), le navigateur
-       peut restituer une chrominance que le sRGB classique ne permet
-       pas d'exprimer — un orange réellement plus intense, pas juste
-       éclairci. Sur un écran limité au sRGB, ça retombe visuellement
-       proche de l'orange d'origine (#f2881d). */
+    /* --color-orange: #f2881d; */
     --color-orange: oklch(70% 0.19 45);
+    /* --color-orange-hover: #f49a3f; */
     --color-orange-hover: oklch(76% 0.17 45);
+    /* --color-orange-pressed: #c26d17; */
     --color-orange-pressed: oklch(60% 0.16 45);
 
-    --color-yellow: #ffd21f;
-    --color-yellow-hover: #ffd738;
-    --color-yellow-pressed: #dcb519;
+    /* --color-yellow: #ffd21f; */
+    --color-yellow: oklch(88% 0.2 93);
+    /* --color-yellow-hover: #ffd738; */
+    --color-yellow-hover: oklch(89% 0.19 94);
+    /* --color-yellow-pressed: #dcb519; */
+    --color-yellow-pressed: oklch(79% 0.18 93);
 
     --bg-void: #190e0b;
     --bg-surface: #251711;

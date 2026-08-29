@@ -8,7 +8,6 @@ import './App.css'
 function App() {
   return (
     <>
-      <div className="site-backdrop" aria-hidden="true" />
       <Header />
       <main className="main">
         <Routes>

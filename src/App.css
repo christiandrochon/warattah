@@ -4,26 +4,6 @@
   flex-direction: column;
 }
 
-.site-backdrop {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background-image:
-    radial-gradient(
-      circle at 50% 50%,
-      var(--color-yellow) 0,
-      var(--color-yellow) 15vmin,
-      transparent 15.5vmin
-    ),
-    linear-gradient(
-      to bottom,
-      var(--color-orange) 0%,
-      var(--color-orange) 50%,
-      var(--color-red) 50%,
-      var(--color-red) 100%
-    );
-}
-
 .site-header {
   display: flex;
   align-items: center;

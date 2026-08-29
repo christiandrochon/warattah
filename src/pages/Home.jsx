@@ -5,6 +5,7 @@ import demoCoverV1 from '../assets/album/distorsion.jpg'
 import demoCoverV2 from '../assets/album/distorsion-v2.jpg'
 import albumCover from '../assets/album/hatred-and-strength.jpg'
 import warattahWordmark from '../assets/brand/warattah-wordmark.svg'
+import FlecheFaitiere from '../components/FlecheFaitiere.jsx'
 import { useI18n } from '../i18n/context.js'
 
 // function scrollToSection(id) {
@@ -125,7 +126,10 @@ function Home() {
           <p>{t.bio.p4}</p>
           <p>{t.bio.p5}</p>
           <p>{t.bio.p6}</p>
-          <p><em>{t.bio.tribal}</em></p>
+          <p className="tribal-word">
+            <FlecheFaitiere className="tribal-icon" />
+            {t.bio.tribal}
+          </p>
         </div>
       </section>
     </>

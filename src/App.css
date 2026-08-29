@@ -279,6 +279,22 @@
   margin-bottom: 4px;
 }
 
+.tribal-word {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Piedra', var(--display);
+  font-size: 28px;
+  letter-spacing: 0.06em;
+  color: var(--color-orange);
+}
+
+.tribal-icon {
+  height: 32px;
+  width: auto;
+  flex-shrink: 0;
+}
+
 .album-card {
   display: flex;
   gap: 24px;

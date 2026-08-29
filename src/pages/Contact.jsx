@@ -7,7 +7,6 @@ const links = [
     value: 'warattah.bandcamp.com',
     href: 'https://warattah.bandcamp.com/music',
   },
-  { label: 'SoundCloud', value: 'soundcloud.com/warattah', href: 'https://soundcloud.com/warattah' },
 ]
 
 function Contact() {

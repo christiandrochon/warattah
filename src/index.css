@@ -43,26 +43,29 @@
     font-size: 16px;
   }
 
-  /* Palette mobile : mêmes teintes, plus lumineuses — les écrans de
-     portable rendent la palette d'origine terne/assombrie. */
+  /* Palette mobile : mêmes teintes, mais plus saturées (pas plus
+     claires) — la palette d'origine paraît terne sur les écrans de
+     portable. Éclaircir le jaune le rendait pâle/pas assez jaune et
+     réduisait le contraste avec le A blanc du logo ; ici on privilégie
+     la saturation, le rouge et le jaune restent aussi sombres ou plus. */
   @media (max-width: 640px) {
-    --color-red: #a3261d;
-    --color-red-hover: #b64941;
-    --color-red-pressed: #851e17;
+    --color-red: #7c140c;
+    --color-red-hover: #94322b;
+    --color-red-pressed: #5a0f0a;
 
-    --color-orange: #fe9f3f;
-    --color-orange-hover: #feb163;
-    --color-orange-pressed: #f18416;
+    --color-orange: #f98b1b;
+    --color-orange-hover: #f99d3f;
+    --color-orange-pressed: #cd7011;
 
-    --color-yellow: #ffdf61;
-    --color-yellow-hover: #ffe375;
-    --color-yellow-pressed: #eaca48;
+    --color-yellow: #ffd21f;
+    --color-yellow-hover: #ffd738;
+    --color-yellow-pressed: #dcb519;
 
     --bg-void: #190e0b;
     --bg-surface: #251711;
     --bg-surface-2: #342016;
-    --border-subtle: rgba(254, 159, 63, 0.18);
-    --border-strong: rgba(254, 159, 63, 0.4);
+    --border-subtle: rgba(249, 139, 27, 0.18);
+    --border-strong: rgba(249, 139, 27, 0.4);
 
     --text-primary: #f7f0e8;
     --text-muted: #bfab9a;

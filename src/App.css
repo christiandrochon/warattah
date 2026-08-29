@@ -52,6 +52,10 @@
   width: auto;
   flex-shrink: 0;
   border: 2px solid var(--border-strong);
+
+  @media (max-width: 640px) {
+    display: none;
+  }
 }
 
 .brand-name-logo {

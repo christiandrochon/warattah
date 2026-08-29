@@ -4,12 +4,15 @@ import VideoEmbed from '../components/VideoEmbed.jsx'
 import demoCoverV1 from '../assets/album/distorsion.jpg'
 import demoCoverV2 from '../assets/album/distorsion-v2.jpg'
 import albumCover from '../assets/album/hatred-and-strength.jpg'
+import warattahWordmark from '../assets/brand/warattah-wordmark.svg'
+import { useI18n } from '../i18n/context.js'
 
 // function scrollToSection(id) {
 //   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
 // }
 
 function Home() {
+  const { t } = useI18n()
   const heroRef = useRef(null)
   const contentRef = useRef(null)
   const titleRef = useRef(null)
@@ -40,43 +43,24 @@ function Home() {
     <>
       <section className="hero" ref={heroRef}>
         <div className="hero-content" ref={contentRef}>
-          <span className="hero-kicker">Metal tribal</span>
+          <span className="hero-kicker">{t.hero.kicker}</span>
           <h1 className="hero-title" ref={titleRef}>
-            Warattah
+            <img src={warattahWordmark} alt="Warattah" className="hero-title-logo" />
           </h1>
-          <p className="hero-tagline">
-            Musique brute, racines profondes. Découvrez l'univers de
-            Warattah.
-          </p>
-          {/* <div className="hero-actions">
-            <button
-              type="button"
-              className="btn btn-primary"
-              onClick={() => scrollToSection('musique')}
-            >
-              Écouter
-            </button>
-            <button
-              type="button"
-              className="btn btn-outline"
-              onClick={() => scrollToSection('groupe')}
-            >
-              Le groupe
-            </button>
-          </div> */}
+          <p className="hero-tagline">{t.hero.tagline}</p>
         </div>
       </section>
 
       <section id="musique" className="section">
         <div className="section-inner">
-          <h2>Titres</h2>
+          <h2>{t.sections.titres}</h2>
           <TrackList />
         </div>
       </section>
 
       <section id="clips" className="section">
         <div className="section-inner">
-          <h2>Clips</h2>
+          <h2>{t.sections.clips}</h2>
           <div className="video-grid">
             <VideoEmbed
               videoId="oQgoRfjrkWw"
@@ -96,25 +80,9 @@ function Home() {
 
       <section id="groupe" className="section">
         <div className="section-inner bio-content">
-          <h2>Le groupe</h2>
+          <h2>{t.sections.groupe}</h2>
 
-          <p>
-            WARATTAH est un groupe de Métal formé par Khris dans le but de
-            pouvoir écrire la musique qu’il n’avait pu exprimer avec ses
-            autres formations.
-          </p>
-
-          <p>
-            En avril 2006, la démo 4 titres — « Distorsion » — a été
-            enregistrée. Celle-ci a été élue « Démo du mois » dans « Rock
-            Hard », « Disque autoproduit du mois » dans « Guitar Part » et
-            diffusée sur leurs cds samplers respectifs. Elle a également été
-            chroniquée dans les magazines spécialisés « Rock Hard », « Rock
-            One », « Metallian », « Guitarist Magazine », « Rock Tribune »,
-            ainsi que dans de nombreux webzines et fanzines à travers le
-            monde. Face à la demande, elle a connu un second pressage, avec
-            une nouvelle pochette.
-          </p>
+          <p>{t.bio.p1}</p>
 
           <div className="album-card">
             <div className="album-covers">
@@ -130,35 +98,13 @@ function Home() {
               />
             </div>
             <div className="album-info">
-              <span className="section-eyebrow">Démo</span>
-              <h3>Distorsion</h3>
-              <p>4 titres — autoproduit — avril 2006 — 2 pressages</p>
+              <span className="section-eyebrow">{t.bio.demoEyebrow}</span>
+              <h3>{t.bio.demoTitle}</h3>
+              <p>{t.bio.demoMeta}</p>
             </div>
           </div>
 
-          <p>
-            Le morceau « Skulls in the River Beds » a servi de support
-            musical pour le reportage des « Vibrations Urbaines 2006 » de
-            Pessac (contest BMX, Rollers). Le clip vidéo du morceau « Fits
-            of Rage » a été diffusé sur MCM, MCM Belgique, MTV Pulse, au
-            Benelux sur S-Television, et au Canada par Shok Productions.
-          </p>
-
-          <p>
-            C’est en 2007 que le groupe se stabilise autour de Khris
-            (guitare/chant), Denis (guitare), Simon (batterie) et Matthieu
-            (basse). WARATTAH est un groupe de Métal sans concession, avec
-            un chant brut, une batterie technique, des guitares puissantes
-            et une basse groovy. Faire de la scène est indispensable au
-            groupe.
-          </p>
-
-          <p>
-            Le groupe a enregistré son premier album — « Hatred & Strength »
-            (14 titres) — en août 2009, mais suite à un grave accident de la
-            route de Khris, le digipack n’est sorti qu’en janvier 2012 sur
-            le label XIIIbis Records / Warner Music.
-          </p>
+          <p>{t.bio.p2}</p>
 
           <div className="album-card">
             <div className="album-covers">
@@ -169,30 +115,17 @@ function Home() {
               />
             </div>
             <div className="album-info">
-              <span className="section-eyebrow">Album</span>
-              <h3>Hatred &amp; Strength</h3>
-              <p>14 titres — XIIIbis Records / Warner Music — janvier 2012</p>
+              <span className="section-eyebrow">{t.bio.albumEyebrow}</span>
+              <h3>{t.bio.albumTitle}</h3>
+              <p>{t.bio.albumMeta}</p>
             </div>
           </div>
 
-          <p>
-            À sa sortie, l’album a été très bien chroniqué dans « Rock
-            Hard », « Metallian », « Metal Obs » et beaucoup d’autres
-            magazines et webzines. Il a abouti sur de nombreuses dates,
-            notamment aux côtés de groupes comme Dagoba ou Gojira, ce qui a
-            permis au groupe de toucher une large audience et de récolter de
-            très bons retours de ces concerts. Le second clip officiel, du
-            morceau « Walk The Line », a été diffusé sur plusieurs chaînes
-            de TV spécialisées et a fait l’objet de plusieurs milliers de
-            vues sur internet.
-          </p>
-
-          <p>
-            En 2013, le groupe se met en stand-by car Khris doit interrompre
-            ses activités musicales pour raisons personnelles. Mais fin
-            2017, il reprend le groupe là où il l’avait laissé et s’attelle
-            désormais à la composition du second album.
-          </p>
+          <p>{t.bio.p3}</p>
+          <p>{t.bio.p4}</p>
+          <p>{t.bio.p5}</p>
+          <p>{t.bio.p6}</p>
+          <p><em>{t.bio.tribal}</em></p>
         </div>
       </section>
     </>

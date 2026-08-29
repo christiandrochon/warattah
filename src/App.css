@@ -61,12 +61,10 @@
   height: 100%;
 }
 
-.brand-name {
-  font-family: var(--display);
-  font-size: 22px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-primary);
+.brand-name-logo {
+  display: block;
+  width: 91px;
+  height: auto;
 }
 
 .site-nav {
@@ -158,6 +156,18 @@
 .hero-title {
   color: var(--text-primary);
   text-shadow: 3px 3px 0 rgba(16, 9, 7, 0.85);
+}
+
+.hero-title-logo {
+  display: block;
+  width: 600px;
+  max-width: 82vw;
+  height: auto;
+  filter: drop-shadow(3px 3px 0 rgba(16, 9, 7, 0.85));
+
+  @media (max-width: 1024px) {
+    width: 380px;
+  }
 }
 
 .hero-tagline {

@@ -1,4 +1,7 @@
+import { useI18n } from '../i18n/context.js'
+
 function VideoEmbed({ videoId, title, isPlaying, onPlay }) {
+  const { t } = useI18n()
   return (
     <div className="video-card">
       <div className="video-frame">
@@ -14,7 +17,7 @@ function VideoEmbed({ videoId, title, isPlaying, onPlay }) {
             type="button"
             className="video-thumb"
             onClick={onPlay}
-            aria-label={`Lire le clip ${title}`}
+            aria-label={t.video.play(title)}
             style={{
               backgroundImage: `url(https://img.youtube.com/vi/${videoId}/hqdefault.jpg)`,
             }}

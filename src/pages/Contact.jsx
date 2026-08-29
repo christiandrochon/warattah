@@ -1,3 +1,5 @@
+import { useI18n } from '../i18n/context.js'
+
 const links = [
   { label: 'Email', value: 'warattah@mailo.com', href: 'mailto:warattah@mailo.com' },
   { label: 'Facebook', value: 'facebook.com/warattah', href: 'https://www.facebook.com/warattah' },
@@ -15,11 +17,12 @@ const links = [
 ]
 
 function Contact() {
+  const { t } = useI18n()
   return (
     <section className="section">
       <div className="section-inner">
-        <span className="section-eyebrow">Contact</span>
-        <h1>Contact</h1>
+        <span className="section-eyebrow">{t.contact.eyebrow}</span>
+        <h1>{t.contact.title}</h1>
         <ul className="track-list">
           {links.map((link) => (
             <li key={link.label}>

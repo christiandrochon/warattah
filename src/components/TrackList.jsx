@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react'
+import { useI18n } from '../i18n/context.js'
 
 const audioBase = `${import.meta.env.BASE_URL}audio/`
 
@@ -15,6 +16,7 @@ function formatTime(seconds) {
 }
 
 function TrackList() {
+  const { t } = useI18n()
   const [playingIndex, setPlayingIndex] = useState(null)
   const [currentTime, setCurrentTime] = useState(0)
   const audioRefs = useRef([])
@@ -48,7 +50,7 @@ function TrackList() {
                 type="button"
                 className="track-play"
                 onClick={() => handleToggle(index)}
-                aria-label={isPlaying ? `Mettre en pause ${track.title}` : `Écouter ${track.title}`}
+                aria-label={isPlaying ? t.track.pause(track.title) : t.track.play(track.title)}
               >
                 {isPlaying ? '❚❚' : '▶'}
               </button>

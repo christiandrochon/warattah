@@ -1,4 +1,5 @@
 import { useI18n } from '../i18n/context.js'
+import { useDocumentMeta } from '../hooks/useDocumentMeta.js'
 
 const links = [
   { label: 'Email', value: 'warattah@mailo.com', href: 'mailto:warattah@mailo.com' },
@@ -11,6 +12,7 @@ const links = [
 
 function Contact() {
   const { t } = useI18n()
+  useDocumentMeta(t.meta.contact.title, t.meta.contact.description)
   return (
     <section className="section">
       <div className="section-inner">

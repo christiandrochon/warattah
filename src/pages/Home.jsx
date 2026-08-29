@@ -7,6 +7,7 @@ import albumCover from '../assets/album/hatred-and-strength.jpg'
 import warattahWordmark from '../assets/brand/warattah-wordmark.svg'
 import FlecheFaitiere from '../components/FlecheFaitiere.jsx'
 import { useI18n } from '../i18n/context.js'
+import { useDocumentMeta } from '../hooks/useDocumentMeta.js'
 
 // function scrollToSection(id) {
 //   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
@@ -14,6 +15,7 @@ import { useI18n } from '../i18n/context.js'
 
 function Home() {
   const { t } = useI18n()
+  useDocumentMeta(t.meta.home.title, t.meta.home.description)
   const heroRef = useRef(null)
   const contentRef = useRef(null)
   const titleRef = useRef(null)
@@ -46,7 +48,8 @@ function Home() {
         <div className="hero-content" ref={contentRef}>
           <span className="hero-kicker">{t.hero.kicker}</span>
           <h1 className="hero-title" ref={titleRef}>
-            <img src={warattahWordmark} alt="Warattah" className="hero-title-logo" />
+            <span className="visually-hidden">{t.hero.a11yTitle}</span>
+            <img src={warattahWordmark} alt="" className="hero-title-logo" />
           </h1>
           <p className="hero-tagline">{t.hero.tagline}</p>
         </div>
@@ -87,16 +90,8 @@ function Home() {
 
           <div className="album-card">
             <div className="album-covers">
-              <img
-                className="album-cover"
-                src={demoCoverV1}
-                alt="Pochette de la démo Distorsion, 1er pressage"
-              />
-              <img
-                className="album-cover"
-                src={demoCoverV2}
-                alt="Pochette de la démo Distorsion, 2nd pressage"
-              />
+              <img className="album-cover" src={demoCoverV1} alt={t.bio.demoCoverAlt1} />
+              <img className="album-cover" src={demoCoverV2} alt={t.bio.demoCoverAlt2} />
             </div>
             <div className="album-info">
               <span className="section-eyebrow">{t.bio.demoEyebrow}</span>
@@ -109,11 +104,7 @@ function Home() {
 
           <div className="album-card">
             <div className="album-covers">
-              <img
-                className="album-cover"
-                src={albumCover}
-                alt="Pochette de l'album Hatred & Strength"
-              />
+              <img className="album-cover" src={albumCover} alt={t.bio.albumCoverAlt} />
             </div>
             <div className="album-info">
               <span className="section-eyebrow">{t.bio.albumEyebrow}</span>

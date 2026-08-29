@@ -53,6 +53,10 @@ export function I18nProvider({ children }) {
 
   const resolvedLang = lang || DEFAULT_LANG
 
+  useEffect(() => {
+    document.documentElement.lang = resolvedLang
+  }, [resolvedLang])
+
   return (
     <I18nContext.Provider value={{ lang: resolvedLang, t: translations[resolvedLang] }}>
       {children}

@@ -8,9 +8,48 @@
     <meta name="color-scheme" content="dark" />
     <meta
       name="description"
-      content="Warattah — metal tribal. Musique brute, racines profondes."
+      content="Warattah, groupe de metal tribal originaire de Nouméa. Musique brute, racines profondes — démo Distorsion (2006), album Hatred & Strength (XIIIbis Records / Warner Music, 2012)."
     />
-    <title>Warattah</title>
+    <title>Warattah — Metal tribal, Nouvelle-Calédonie</title>
+
+    <!-- Open Graph / Twitter Card : doivent rester statiques ici, les
+         crawlers de partage social n'exécutent en général pas le JS de
+         la page (contrairement à Googlebot). Contenu par défaut en
+         français, la langue affichée à l'écran étant choisie côté
+         client après ce premier rendu. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://warattah.com/" />
+    <meta property="og:title" content="Warattah — Metal tribal, Nouvelle-Calédonie" />
+    <meta
+      property="og:description"
+      content="Warattah, groupe de metal tribal originaire de Nouméa. Musique brute, racines profondes — démo Distorsion (2006), album Hatred & Strength (XIIIbis Records / Warner Music, 2012)."
+    />
+    <meta property="og:image" content="https://warattah.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Warattah — Metal tribal, Nouvelle-Calédonie" />
+    <meta
+      name="twitter:description"
+      content="Warattah, groupe de metal tribal originaire de Nouméa. Musique brute, racines profondes."
+    />
+    <meta name="twitter:image" content="https://warattah.com/og-image.jpg" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MusicGroup",
+        "name": "Warattah",
+        "genre": "Tribal Metal",
+        "foundingDate": "2006",
+        "foundingLocation": {
+          "@type": "Place",
+          "name": "Nouméa, Nouvelle-Calédonie"
+        },
+        "url": "https://warattah.com/",
+        "sameAs": ["https://warattah.bandcamp.com/music"]
+      }
+    </script>
     <script type="text/javascript">
       // Restaure la vraie URL après le redirect encodé par public/404.html
       // (technique standard "spa-github-pages" — nécessaire car GitHub

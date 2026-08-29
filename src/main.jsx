@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { HashRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
 import { I18nProvider } from './i18n/I18nContext.jsx'
@@ -8,9 +8,9 @@ import { I18nProvider } from './i18n/I18nContext.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <I18nProvider>
-      <HashRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <App />
-      </HashRouter>
+      </BrowserRouter>
     </I18nProvider>
   </StrictMode>,
 )

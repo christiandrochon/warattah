@@ -11,6 +11,24 @@
       content="Warattah — metal tribal. Musique brute, racines profondes."
     />
     <title>Warattah</title>
+    <script type="text/javascript">
+      // Restaure la vraie URL après le redirect encodé par public/404.html
+      // (technique standard "spa-github-pages" — nécessaire car GitHub
+      // Pages est un hébergeur statique sans réécriture serveur pour
+      // BrowserRouter).
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&')
+            })
+            .join('?')
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash)
+        }
+      })(window.location)
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

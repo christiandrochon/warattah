@@ -42,6 +42,31 @@
   @media (max-width: 1024px) {
     font-size: 16px;
   }
+
+  /* Palette mobile : mêmes teintes, plus lumineuses — les écrans de
+     portable rendent la palette d'origine terne/assombrie. */
+  @media (max-width: 640px) {
+    --color-red: #a3261d;
+    --color-red-hover: #b64941;
+    --color-red-pressed: #851e17;
+
+    --color-orange: #fe9f3f;
+    --color-orange-hover: #feb163;
+    --color-orange-pressed: #f18416;
+
+    --color-yellow: #ffdf61;
+    --color-yellow-hover: #ffe375;
+    --color-yellow-pressed: #eaca48;
+
+    --bg-void: #190e0b;
+    --bg-surface: #251711;
+    --bg-surface-2: #342016;
+    --border-subtle: rgba(254, 159, 63, 0.18);
+    --border-strong: rgba(254, 159, 63, 0.4);
+
+    --text-primary: #f7f0e8;
+    --text-muted: #bfab9a;
+  }
 }
 
 * {

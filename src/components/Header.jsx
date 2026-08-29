@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import SunMark from './SunMark.jsx'
+import warattahMark from '../assets/brand/warattah-mark.svg'
 import warattahWordmark from '../assets/brand/warattah-wordmark.svg'
 import { useI18n } from '../i18n/context.js'
 
@@ -13,9 +13,7 @@ function Header() {
   return (
     <header className="site-header">
       <NavLink to="/" className="brand" end>
-        <span className="brand-mark">
-          <SunMark />
-        </span>
+        <img src={warattahMark} alt="" className="brand-mark" />
         <img src={warattahWordmark} alt="Warattah" className="brand-name-logo" />
       </NavLink>
       <nav>

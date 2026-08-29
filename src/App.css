@@ -47,18 +47,11 @@
 }
 
 .brand-mark {
-  width: 36px;
+  display: block;
   height: 36px;
-  border-radius: 50%;
-  overflow: hidden;
+  width: auto;
   flex-shrink: 0;
   border: 2px solid var(--border-strong);
-}
-
-.brand-mark svg {
-  display: block;
-  width: 100%;
-  height: 100%;
 }
 
 .brand-name-logo {

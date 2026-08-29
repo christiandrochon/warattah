@@ -4,8 +4,10 @@ import { DEFAULT_LANG, I18nContext } from './context.js'
 
 const CACHE_KEY = 'warattah_geo_lang'
 
+const FRENCH_COUNTRY_CODES = new Set(['FR', 'NC', 'PF', 'WF', 'BE', 'CH', 'MC'])
+
 function langFromCountry(countryCode) {
-  if (countryCode === 'FR') return 'fr'
+  if (FRENCH_COUNTRY_CODES.has(countryCode)) return 'fr'
   if (countryCode === 'ES') return 'es'
   return DEFAULT_LANG
 }

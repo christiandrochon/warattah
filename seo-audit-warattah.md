@@ -118,7 +118,7 @@ trancher consciemment (voir section 4).
 
 **Preuve** — `index.html:9-13` :
 ```html
-<meta name="description" content="Warattah — metal tribal. Musique brute, racines profondes." />
+<meta name="description" content="Warattah — force primitive. Musique brute, racines profondes." />
 <title>Warattah</title>
 ```
 Un seul title, une seule description, en français, statiques dans le
@@ -127,7 +127,7 @@ Google verra jamais pour l'ensemble du site**, Home et Contact compris,
 puisqu'il n'y a qu'une URL crawlable.
 
 - `<title>Warattah</title>` est très court, sans qualificatif utile à
-  l'intention de recherche (pas de "metal tribal", "Nouvelle-Calédonie",
+  l'intention de recherche (pas de "primal metal",
   etc. — voir section 2).
 - Aucun mécanisme dans le code (pas de `react-helmet-async` en dépendance
   — vérifié dans `package.json:12-27`, absent — ni d'effet manuel
@@ -246,11 +246,11 @@ pour les moteurs et les technologies d'assistance.
 
 ### Pertinence face à l'intention de recherche probable
 
-Une requête plausible comme "warattah metal tribal nouvelle calédonie"
+Une requête plausible comme "warattah primal metal bordeaux" ou "primal metal bordeaux france"
 combine une recherche de marque (le nom du groupe, faible ambiguïté) et
 une recherche d'attributs (genre musical, origine géographique). Le
 contenu de bio couvre bien la matière factuelle utile à cette intention :
-genre ("Metal brut et instinctif" / "Metal tribal", `translations.js:5,10`),
+genre ("Metal brut et instinctif" / "Metal tribal" / "Primal Metal" / "Metal primitif", `translations.js:5,10`),
 localisation (Nouméa, "aux portes de l'Australie", `translations.js:20`),
 histoire (démo 2006, album 2012 chez XIIIbis/Warner, tournées avec Gojira
 et Strapping Young Lad, `translations.js:10-21`). C'est un contenu
@@ -259,11 +259,11 @@ factuel solide pour de la recherche de marque.
 **Limite constatée** : ce contenu n'existe qu'au sein du rendu JS d'une
 seule page potentiellement indexable (section 1.1/1.4) et n'est reflété
 nulle part dans le `title`/la `description` statiques (toujours
-"Warattah — metal tribal. Musique brute, racines profondes.",
+"Warattah — primal metal. Musique brute, racines profondes.",
 `index.html:9-13`) qui ne mentionnent ni la Nouvelle-Calédonie, ni Nouméa,
 ni les repères factuels (Gojira, Warner, 2006) qui pourraient améliorer
 la correspondance à des requêtes informationnelles plus larges
-("groupe metal Nouvelle-Calédonie", "metal tribal calédonien").
+("groupe metal Bordeaux, France", "primal metal bordelais").
 
 ### Qualité du texte de bio déjà en place
 
@@ -407,7 +407,7 @@ actuelles — `package.json:12-27` — ou effets manuels `document.title`/
 mise à jour de la balise meta description dans `I18nContext.jsx` ou par
 route). Contrat pour `front` : le `title`/la `description` doivent
 refléter `t.*` (langue résolue) et intégrer des repères factuels déjà
-présents dans la bio (ex. "Warattah — Metal tribal, Nouvelle-Calédonie"
+présents dans la bio (ex. "Warattah — Primal Metal, Bordeaux, France"
 plutôt que "Warattah" seul) plutôt qu'une réécriture éditoriale que je ne
 possède pas — la formulation finale reste à l'équipe éditoriale.
 
@@ -447,7 +447,7 @@ erreur de récupération.
 **7. Ajouter un bloc `schema.org` `MusicGroup` en JSON-LD**
 
 Champs minimaux réalistes à partir du contenu déjà existant : `name`,
-`genre` ("tribal metal"), `foundingDate` (2006, `translations.js:10`),
+`genre` ("primal metal"), `foundingDate` (2006, `translations.js:10`),
 `sameAs` (URL Bandcamp), `member`/`founder` (Khris,
 `translations.js:19`) si le groupe souhaite l'exposer publiquement.
 
@@ -472,8 +472,7 @@ conséquence.
 Actuellement uniquement un `alt` d'image (`Home.jsx:48-50`). Ajouter un
 texte réel (visuellement masqué si la direction artistique impose le
 logo comme seul élément visible, mais présent dans le DOM) reprenant un
-qualificatif déjà présent dans la bio (ex. "Warattah — Metal tribal,
-Nouvelle-Calédonie"). Décision de formulation exacte laissée à l'équipe
+qualificatif déjà présent dans la bio (ex. "Warattah — Primal Metal"). Décision de formulation exacte laissée à l'équipe
 éditoriale, pas à moi.
 
 DONE SI : le `h1` de la page contient un noeud de texte lisible (pas

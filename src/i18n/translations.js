@@ -4,7 +4,7 @@ export const translations = {
     hero: {
       kicker: 'Metal tribal',
       tagline: 'Musique brute, racines profondes.',
-      a11yTitle: 'Warattah — Metal tribal, Nouvelle-Calédonie',
+      a11yTitle: 'Warattah — Primal Metal',
     },
     sections: { titres: 'Titres', clips: 'Clips', groupe: 'Le groupe' },
     bio: {
@@ -33,14 +33,14 @@ export const translations = {
     video: { play: (name) => `Lire le clip ${name}` },
     meta: {
       home: {
-        title: 'Warattah — Metal tribal, Nouvelle-Calédonie',
+        title: 'Warattah — Primal Metal',
         description:
-          'Warattah, groupe de metal tribal originaire de Nouméa. Musique brute, racines profondes — démo Distorsion (2006), album Hatred & Strength (XIIIbis Records / Warner Music, 2012).',
+          'Warattah, groupe de primal metal originaire. Musique brute, racines profondes — démo Distorsion (2006), album Hatred & Strength (XIIIbis Records / Warner Music, 2012).',
       },
       contact: {
         title: 'Contact — Warattah',
         description:
-          'Contactez Warattah : email et Bandcamp du groupe de metal tribal de Nouvelle-Calédonie.',
+          'Contactez Warattah : email et Bandcamp du groupe de primal metal.',
       },
     },
   },
@@ -50,7 +50,7 @@ export const translations = {
     hero: {
       kicker: 'Tribal metal',
       tagline: 'Raw music, deep roots.',
-      a11yTitle: 'Warattah — Tribal Metal from New Caledonia',
+      a11yTitle: 'Warattah — Primal Metal',
     },
     sections: { titres: 'Tracks', clips: 'Videos', groupe: 'About' },
     bio: {
@@ -79,13 +79,13 @@ export const translations = {
     video: { play: (name) => `Play video ${name}` },
     meta: {
       home: {
-        title: 'Warattah — Tribal Metal from New Caledonia',
+        title: 'Warattah — Primal Metal',
         description:
-          'Warattah, a tribal metal band from Nouméa, New Caledonia. Raw music, deep roots — Distorsion demo (2006), Hatred & Strength album (XIIIbis Records / Warner Music, 2012).',
+          'Warattah, a primal metal band. Raw music, deep roots — Distorsion demo (2006), Hatred & Strength album (XIIIbis Records / Warner Music, 2012).',
       },
       contact: {
         title: 'Contact — Warattah',
-        description: 'Get in touch with Warattah: email and Bandcamp for the tribal metal band from New Caledonia.',
+        description: 'Get in touch with Warattah: email and Bandcamp for the primal metal band from New Caledonia.',
       },
     },
   },
@@ -93,9 +93,9 @@ export const translations = {
   es: {
     nav: { home: 'Inicio', contact: 'Contacto' },
     hero: {
-      kicker: 'Metal tribal',
+      kicker: 'Primal Metal',
       tagline: 'Música cruda, raíces profundas.',
-      a11yTitle: 'Warattah — Metal tribal de Nueva Caledonia',
+      a11yTitle: 'Warattah — Primal Metal',
     },
     sections: { titres: 'Temas', clips: 'Videoclips', groupe: 'Sobre la banda' },
     bio: {
@@ -124,13 +124,13 @@ export const translations = {
     video: { play: (name) => `Reproducir el video ${name}` },
     meta: {
       home: {
-        title: 'Warattah — Metal tribal de Nueva Caledonia',
+        title: 'Warattah — Primal Metal',
         description:
-          'Warattah, banda de metal tribal de Numea, Nueva Caledonia. Música cruda, raíces profundas — maqueta Distorsion (2006), álbum Hatred & Strength (XIIIbis Records / Warner Music, 2012).',
+          'Warattah, banda de primal metal Caledonia. Música cruda, raíces profundas — maqueta Distorsion (2006), álbum Hatred & Strength (XIIIbis Records / Warner Music, 2012).',
       },
       contact: {
         title: 'Contacto — Warattah',
-        description: 'Contacta con Warattah: email y Bandcamp de la banda de metal tribal de Nueva Caledonia.',
+        description: 'Contacta con Warattah: email y Bandcamp de la banda de primal metal de Nueva Caledonia.',
       },
     },
   },

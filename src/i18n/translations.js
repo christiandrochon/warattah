@@ -2,7 +2,7 @@ export const translations = {
   fr: {
     nav: { home: 'Accueil', contact: 'Contact' },
     hero: {
-      kicker: 'Metal tribal',
+      kicker: 'Primal Metal',
       tagline: 'Musique brute, racines profondes.',
       a11yTitle: 'Warattah — Primal Metal',
     },
